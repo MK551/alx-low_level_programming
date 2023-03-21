@@ -4,8 +4,14 @@
  * @n: the int to extract the last digit from
  * Return: value of the last digit
  */
-int print_last_digit(int num) {
-    int last_digit = num % 10;  // Get the last digit by finding remainder of the number when divided by 10
-    printf("The last digit of %d is %d\n", num, last_digit); // Print the last digit
-    return last_digit;  // Return the last digit
+int print_last_digit(int n)
+{
+	int a;	
+	if (n < 0)
+		n = -n;
+	a = n % 10;
+	if (a < 0)
+		a = -a;
+	_putchar(a + '0');
+	return (a);
 }
